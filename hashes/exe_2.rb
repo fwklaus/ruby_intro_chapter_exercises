@@ -2,39 +2,39 @@
 # difference between merge and merge!? Write a program that uses both and
 # illustrate the differences
 
-idyllic_love = {
-                first: "Katy",
-                second: "Abigail",
-                third: "Tess",
-                fourth: "Gabriela"
+hash_1 = {
+                first: 1,
+                second: 2,
+                third: 3,
+                fourth: 4
               }
 
-carnal_love = {
-               fifth: "Godfry",
-               sixth: "Teresa",
-               seventh: "Mugford",
-               eight: "Stellar"
+hash_2 = {
+               fifth: 5,
+               sixth: 6,
+               seventh: 7,
+               eight: 8
               }
 
-strange_love = {
-            ninth: "Leuthen",
-            tenth: "Tidwell"
+hash_3 = {
+            ninth: 9,
+            tenth: 10
               }
 
 
 # merge returns a merged hash, doesn't mutate either hash 
-no_love = strange_love.merge(carnal_love)
-puts "No love: #{no_love.values}"
-puts "Strange love: #{strange_love.values}"
-puts "Carnal Love: #{carnal_love.values}"
+new_hash = hash_3.merge(hash_2)
+puts "New hash: #{new_hash.values}"
+puts "Hash 3: #{hash_3.values}"
+puts "Hash 2: #{hash_2.values}"
 
 # merge! returns a merged hash
 # mutates hash the method is invoked upon, but
 # not the hash passed to the merge! method
-true_love = idyllic_love.merge!(strange_love)
-puts "True love: #{true_love.values}"
-puts "Strange love: #{strange_love.values}"
-puts "Idyllic love: #{idyllic_love.values}"
+new_hash_2 = hash_1.merge!(hash_3)
+puts "new_hash_2: #{new_hash_2.values}"
+puts "Hash 3: #{hash_3.values}"
+puts "Hash 1: #{hash_1.values}"
 
 
 
